@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_Layout";
+}
+
+
+<div>
+    <h4>Top 10 Best Films of All Times</h4>
+    <ol>
+        @foreach (var element in ViewBag.FilmsByImdb)
+        {
+
+            <li>@element.Filmname &emsp; @element.ImdbScore</li>
+
+        }
+    </ol>
+
+    <h4>Top 10 Newest Films</h4>
+    <ol>
+        @foreach (var element in ViewBag.NewFilms)
+        {
+
+            <li>@element.Filmname &emsp; @element.ImdbScore</li>
+
+        }
+    </ol>
+</div>

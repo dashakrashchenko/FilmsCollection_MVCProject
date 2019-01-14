@@ -1,0 +1,79 @@
+﻿@model FilmsCollectionProject.Models.Films
+
+@{
+    ViewData["Title"] = "Film Info";
+}
+
+
+<link href="~/css/Styles.css" rel="stylesheet">
+
+<h2>Information about film</h2>
+
+<div>
+    <h4>Films</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Filmname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Filmname)
+        </dd>
+        <div>
+            <dt style="display:inline;">
+                <label style="display:inline">Filmmaker</label>
+            </dt>
+            <dd>
+                <p>@ViewBag.MakerName</p>
+            </dd>
+            <dd>
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                    Show more films
+                </button>
+            </dd>
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">Top 5 films</h4>
+                        </div>
+                        <div class="modal-body">
+                            jhignhflhihofgnlkhnkhfnh
+                        </div>                       
+                </div>
+            </div>
+        </div>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Genre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Genre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Releasedate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Releasedate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Budget)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Budget)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ImdbScore)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ImdbScore)
+        </dd>
+    </dl>
+</div>
+
+<div id="main-block">
+
+</div>
